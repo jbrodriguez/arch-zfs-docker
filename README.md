@@ -15,8 +15,13 @@ against the latest available linux-lts kernel
 
 ## usage
 
-- clone/download this repo to your system
-- `docker build --tag archbuild .`
-- `docker run -i -t --rm -v ~/tmp/zfs:/package archbuild`
+- clone/download this repo to your system, then
 
-will create a zfs-linux-lts & zfs-utils below ~/tmp/zfs
+```bash
+# make sure to start with a fresh image
+docker rmi $(docker images --filter=reference="archbuild" -q)
+docker buildx build --tag archbuild .
+docker run -i -t --rm -v ~/tmp/zfs:/package archbuild
+```
+
+will create zfs-linux-lts & zfs-utils folders below ~/tmp/zfs
