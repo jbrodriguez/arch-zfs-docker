@@ -7,7 +7,7 @@ if [ -z "$LTS_VERSION" ]; then
   exit 1
 fi
 
-# gpg --keyserver keys.gnupg.net --recv-keys 6AD860EED4598027
+gpg --keyserver keys.gnupg.net --recv-keys 6AD860EED4598027
 
 # build zfs-utils
 rm -rf zfs-utils
