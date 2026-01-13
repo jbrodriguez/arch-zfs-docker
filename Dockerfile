@@ -28,8 +28,8 @@ CMD gpg --keyserver keys.gnupg.net --recv-keys 6AD860EED4598027 && \
     rm -rf zfs-utils && \
     git clone https://aur.archlinux.org/zfs-utils.git && \
     pushd zfs-utils && \
-    # makepkg --install --syncdeps --clean --rmdeps --noconfirm && \
-    makepkg --syncdeps --clean --rmdeps --noconfirm && \
+    makepkg --install --syncdeps --clean --rmdeps --noconfirm && \
+    # makepkg --syncdeps --clean --rmdeps --noconfirm && \
     popd && \
     rm -rf zfs-linux-lts && \
     git clone https://aur.archlinux.org/zfs-linux-lts.git && \
